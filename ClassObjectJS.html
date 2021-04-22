@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Formulir Cimol</title>
+</head>
+    <body>
+    <form onsubmit="return false">
+        Jumlah Cimol : <input type="text" id="jumlahCimol"> <br><br> 
+        Topping : <input type="text" id="topping"> <br><br> 
+        Jumlah Varian Rasa : <input type="text" id="jmlhVarian"> <br><br>
+        <button onclick="klik()"> 
+            Submit
+        </button>
+    </form>
+
+<script>
+    function klik() {
+        let x = document.getElementById("jumlahCimol").value;
+        let y = document.getElementById("topping").value; 
+        let z = document.getElementById("jmlhVarian").value;
+
+class Cimol {
+
+jmlhCimol;
+topping; 
+jmlhVarian;
+
+constructor(jmlhCimol, topping, jmlhVarian) {
+    this.jmlhCimol= x; 
+    this.topping = y;
+    this.jmlhVarian = z;
+}
+
+pedas() {return "Cimol ini Pedas";}
+asin() {return "Cimol ini Asin";}
+manis() {return "Cimol ini Manis";}
+}
+
+    let hot = new Cimol;
+    let kress = new Cimol; 
+    let chese = new Cimol;
+
+        console.log("Jumlah Cimol : " + hot.jmlhCimol); 
+        console.log("Topping : " + kress.topping); 
+        console.log("Rasa : " + chese.pedas());
+
+        console.log("Jumlah Cimol : " + hot.jmlhCimol);
+        console.log("Topping : " + kress.topping); 
+        console.log("Rasa : " + chese.asin());
+
+        console.log("Jumlah Cimol : " + hot.jmlhCimol); 
+        console.log("Topping : " + kress.topping); 
+        console.log("Rasa : " + chese.manis());
+        } 
+        </script>
+    </body>
+</html>
